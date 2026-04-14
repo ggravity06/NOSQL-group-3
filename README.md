@@ -1,68 +1,69 @@
 # NOSQL-group-3
 
-📖 Library Management System
-A web-based Library Management System built with Node.js, Express, and MongoDB (NoSQL). Supports full CRUD operations for books, a borrow/return loan system, and an analytics report dashboard.
+## 📖 Library Management System
 
-Built as a NoSQL Database Assignment — demonstrating document-oriented database design with MongoDB Atlas.
+A web-based Library Management System built with Node.js, Express, and MongoDB (NoSQL).  
+This application supports full CRUD operations for books, a borrow/return loan system, and an analytics dashboard.
 
-⚙️ Prerequisites
-Make sure the following are installed before running the project:
+Developed as part of a NoSQL Database assignment, demonstrating document-oriented database design using MongoDB Atlas.
 
-Node.js v18+ → nodejs.org
-npm (bundled with Node.js)
-MongoDB Atlas free account → mongodb.com/atlas
+---
 
-Verify installation:
-bashnode -v   # e.g. v20.11.0
-npm -v    # e.g. 10.x.x
+## ✨ Features
 
-🚀 Getting Started
-Step 1 — Install Dependencies
-bashnpm install
-Step 2 — Install nodemon (recommended for development)
-nodemon auto-restarts the server every time you save a file — no need to stop and re-run manually.
-bashnpm install -g nodemon
+### 📚 Book Management (CRUD)
+- Add books with ISBN, Title, Genre, and Author(s)
+- View all books in a table
+- Search by title, author, or genre
+- Edit or delete books
+- Real-time availability status (Available / Borrowed)
 
-Without nodemon: you can still run the app with node app.js, but you'll need to restart it manually after every code change.
+### 🔖 Loan System
+- Borrow books with borrower name and due date
+- Automatically disables unavailable books
+- One-click return system
+- Overdue loans highlighted automatically
+- Filter by: All / Borrowed / Returned
 
-Step 3 - Set Up MongoDB Atlas
+### 📊 Reports Dashboard
+- Busiest Borrow Days (Top 10 dates)
+- Borrows by Genre
+- Summary of active loans
+- Most / Least borrowed categories
 
-Go to mongodb.com/atlas → Try Free → Sign up
-Create a free M0 cluster → Region: AWS / Singapore
-Database Access → Add New User → set username & password
-Network Access → Add IP Address → Allow Access from Anywhere (0.0.0.0/0)
-Click Connect → Drivers → copy the connection string
+---
+
+## ⚙️ Prerequisites
+
+Make sure you have the following installed:
+
+- Node.js (v18 or higher)
+- npm (comes with Node.js)
+- MongoDB Atlas account
 
 
-Step 4 — Run the App
-bashnodemon app.js
-Expected output:
-Connected to MongoDB Atlas
-Server running on http://localhost:3000
+step 1) Clone the Repository: Download the project from GitHub
 
+step 2) Create a .env file in the root directory then put MONGODB_URI 
 
-Step 5 — Open in Browser
-http://localhost:3000
-The web interface will load.
+step 3) Install Node.js 
 
-✨ Features
-📚 Book Management (CRUD)
+step 4) Install Dependencies: npm install
 
-Add books with ISBN, Title, Genre, and Author(s)
-View all books in a table
-Search by title, author, or genre
-Edit or delete any book
-Real-time availability status (Available / Borrowed)
+        Install nodemon (recommended): npm install -g nodemon
 
-🔖 Loan System
+step 5) Allow IP Access in MongoDB Atlas
 
-Borrow a book — select from available books, enter borrower name and due date
-Already-borrowed books are automatically disabled in the dropdown
-Return a book with one click
-Overdue loans are highlighted in red automatically
-Filter loans by: All / Borrowed / Returned
+        Go to MongoDB Atlas:
 
-📊 Reports
+        - Navigate to Network Access
+        - Click Add IP Address
+        - Add your IP Address
 
-Busiest Borrow Days — bar chart of top 10 dates with most borrow activity
-Borrows by Genre — cards showing total borrows, active loans, and Most/Least Borrowed genre
+step 6) Run the Server
+        
+        Using Node: node app.js 
+
+step 7) Open in Browser
+
+        Go to: http://localhost:3000
